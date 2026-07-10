@@ -21,7 +21,7 @@ const (
 
 var modalStyle = lipgloss.NewStyle().
 	Border(lipgloss.RoundedBorder(), true).
-	BorderForeground(colors.AdaptiveColor(colors.Blue)).
+	BorderForeground(colors.AdaptiveColor(colors.Accent)).
 	Padding(1, 2).
 	Margin(1, 1)
 

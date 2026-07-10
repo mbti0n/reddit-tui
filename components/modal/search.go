@@ -17,7 +17,7 @@ const (
 
 var (
 	searchHelpStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Italic(true)
-	searchModelStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Purple))
+	searchModelStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
 )
 
 type SubredditSearchModal struct {

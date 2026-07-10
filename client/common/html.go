@@ -19,7 +19,7 @@ const (
 )
 
 var (
-	HyperLinkStyle     = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Blue)).Italic(true)
+	HyperLinkStyle     = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Link)).Italic(true)
 	LinkPostTitleStyle = lipgloss.NewStyle().Bold(true).Foreground(colors.AdaptiveColor(colors.Text))
 )
 

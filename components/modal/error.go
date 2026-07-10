@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	defaultErrorStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Red)).Bold(true)
+	defaultErrorStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent)).Bold(true)
 	errorMsgStyle     = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text))
 )
 

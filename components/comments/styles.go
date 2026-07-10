@@ -9,19 +9,19 @@ import (
 var viewportStyle = lipgloss.NewStyle().Margin(0, 2, 1, 2)
 
 var (
-	commentAuthorStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Blue)).Bold(true)
-	commentDateStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Lavender)).Italic(true)
+	commentAuthorStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Bold(true)
+	commentDateStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Subtext)).Italic(true)
 	commentTextStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text))
-	popularPointsStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Purple))
-	defaultPointsStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Purple))
-	negativePointsStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Red))
-	collapsedStyle      = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Yellow))
+	popularPointsStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
+	defaultPointsStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
+	negativePointsStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Negative))
+	collapsedStyle      = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
 )
 
 var (
-	postAuthorStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Blue))
-	postPointsStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Purple))
-	totalCommentsStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Orange))
+	postAuthorStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Subtext))
+	postPointsStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
+	totalCommentsStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text))
 	postTextStyle      = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Sand))
 	postTimestampStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Faint(true)
 )

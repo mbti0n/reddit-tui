@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	spinnerStyle     = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Purple))
+	spinnerStyle     = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
 	spinnerTextStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Italic(true)
 )
 

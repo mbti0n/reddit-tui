@@ -16,7 +16,7 @@ var (
 				MarginBottom(1).
 				Padding(0, 2).
 				Height(1).
-				Background(colors.AdaptiveColors(colors.Blue, colors.Indigo)).
+				Background(colors.AdaptiveColors(colors.Accent, colors.Accent)).
 				Foreground(colors.AdaptiveColors(colors.White, colors.Sand))
 
 	defaultDescriptionStyle = lipgloss.NewStyle().
