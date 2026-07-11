@@ -1,4 +1,9 @@
-# Reddittui
+# Reddittui, forked by MBtion
+A fork to implement more simple color configuration to Reddittui.
+
+## Roadmap
+- [ ] Custom color configuration from a TOML file.
+
 A lightweight terminal application for browsing Reddit from your command line. Powered by [bubbletea](https://github.com/charmbracelet/bubbletea)
 
 ## Features
