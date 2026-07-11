@@ -71,6 +71,12 @@ reddittui --subreddit dogs
 reddittui --post 1iyuce4
 ```
 
+### Build
+Clone this repository, then run this command to both build and run the program after changing something.
+```bash
+go build && go run .
+```
+
 ## Keybindings
 - Navigation
   - **h, j, k, l:** Vim movement
