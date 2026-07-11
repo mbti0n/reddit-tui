@@ -22,6 +22,6 @@ var (
 	postAuthorStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Subtext))
 	postPointsStyle    = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
 	totalCommentsStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text))
-	postTextStyle      = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Sand))
+	postTextStyle      = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.White))
 	postTimestampStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Faint(true)
 )

@@ -10,7 +10,6 @@ const (
 	Negative
 	Text
 	Subtext
-	Sand
 	White
 )
 
@@ -20,7 +19,6 @@ type Palette struct {
 	Negative string
 	Text     string
 	Subtext  string
-	Sand     string
 	White    string
 }
 
@@ -36,8 +34,6 @@ func (p Palette) ToHex(color Color) string {
 		return p.Text
 	case Subtext:
 		return p.Subtext
-	case Sand:
-		return p.Sand
 	case White:
 		return p.White
 	default:
@@ -52,7 +48,6 @@ var Dark = Palette{
 	Negative: "#6B5DFB",
 	Text:     "#F5F5F5",
 	Subtext:  "#D0D0D0",
-	Sand:     "#dddddd",
 	White:    "#ffffff",
 }
 
@@ -63,7 +58,6 @@ var Light = Palette{
 	Negative: "#6B5DFB",
 	Text:     "#4c4f69",
 	Subtext:  "#5c5f77",
-	Sand:     "#dddddd",
 	White:    "#ffffff",
 }
 
