@@ -79,8 +79,8 @@ go build && go run .
 
 ## Keybindings
 - Navigation
-  - **h, j, k, l:** Vim movement
-  - **left, right, up, down:** Normal movement
+  - **h, j, k, l:** move left/down/up/right (Vim-style) 
+  - **left, right, up, down:** move left/down/up/right (arrow)
   - **g**: Go to top of page
   - **G**: Go to bottom of page
   - **s**: Switch subreddits
