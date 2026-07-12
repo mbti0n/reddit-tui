@@ -19,11 +19,13 @@ const (
 	showingError
 )
 
-var modalStyle = lipgloss.NewStyle().
+func modalStyle() lipgloss.Style {
+	return lipgloss.NewStyle().
 	Border(lipgloss.RoundedBorder(), true).
 	BorderForeground(colors.AdaptiveColor(colors.Accent)).
 	Padding(1, 2).
 	Margin(1, 1)
+}
 
 type ModalManager struct {
 	quit       QuitModal
@@ -41,7 +43,7 @@ func NewModalManager() ModalManager {
 		search:     NewSubredditSearchModal(),
 		spinner:    NewSpinnerModal(),
 		errorModal: NewErrorModal(),
-		style:      modalStyle,
+		style:      modalStyle(),
 	}
 }
 

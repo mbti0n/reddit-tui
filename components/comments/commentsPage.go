@@ -23,6 +23,8 @@ type CommentsPage struct {
 }
 
 func NewCommentsPage(redditClient client.RedditClient) CommentsPage {
+	commentHeaderStyles()
+	initStyles()
 	header := NewCommentsHeader()
 	vp := NewCommentsViewport()
 

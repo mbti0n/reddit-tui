@@ -15,17 +15,16 @@ const (
 	defaultSearchWidth = 35
 )
 
-var (
-	searchHelpStyle  = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Italic(true)
-	searchModelStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
-)
-
 type SubredditSearchModal struct {
 	textinput.Model
 	style lipgloss.Style
+	searchHelpStyle lipgloss.Style
+	searchModelStyle lipgloss.Style
 }
 
 func NewSubredditSearchModal() SubredditSearchModal {
+	searchHelpStyle := lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Italic(true)
+	searchModelStyle := lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
 	searchTextInput := textinput.New()
 	searchTextInput.Placeholder = searchPlaceholder
 	searchTextInput.ShowSuggestions = true
@@ -35,6 +34,8 @@ func NewSubredditSearchModal() SubredditSearchModal {
 	return SubredditSearchModal{
 		Model: searchTextInput,
 		style: lipgloss.NewStyle(),
+		searchHelpStyle: searchHelpStyle,
+		searchModelStyle: searchModelStyle,
 	}
 }
 
@@ -59,8 +60,8 @@ func (s SubredditSearchModal) Update(msg tea.Msg) (SubredditSearchModal, tea.Cmd
 }
 
 func (s SubredditSearchModal) View() string {
-	titleView := searchHelpStyle.Render(searchHelpText)
-	modelView := searchModelStyle.Render(s.Model.View())
+	titleView := s.searchHelpStyle.Render(searchHelpText)
+	modelView := s.searchModelStyle.Render(s.Model.View())
 	joined := lipgloss.JoinVertical(lipgloss.Left, titleView, modelView)
 	return s.style.Render(joined)
 }

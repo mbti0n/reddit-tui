@@ -16,8 +16,7 @@ var (
 				MarginBottom(1).
 				Padding(0, 2).
 				Height(1).
-				Background(colors.AdaptiveColors(colors.Accent, colors.Accent)).
-				Foreground(colors.AdaptiveColors(colors.White, colors.White))
+				Foreground(colors.AdaptiveColor(colors.Accent))
 
 	defaultDescriptionStyle = lipgloss.NewStyle().
 				Bold(true).
@@ -33,6 +32,17 @@ type CommentsHeader struct {
 	Points           string
 	TotalComments    int
 	W                int
+}
+
+func commentHeaderStyles() {
+    titleStyle = lipgloss.NewStyle().
+				MarginBottom(1).
+				Height(1).
+				Foreground(colors.AdaptiveColor(colors.Accent))
+
+	defaultDescriptionStyle = lipgloss.NewStyle().
+				Bold(true).
+				Foreground(colors.AdaptiveColor(colors.Text))
 }
 
 func NewCommentsHeader() CommentsHeader {

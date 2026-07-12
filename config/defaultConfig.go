@@ -21,4 +21,12 @@ const defaultConfiguration = `
 #[server]
 #domain = "old.reddit.com"
 #type = "old"
+
+# Color configuration
+[colors]
+accent = "#FF713E"
+link = "#6688E4"
+negative = "#6B5DFB"
+text = "#F5F5F5"
+subtext = "#D0D0D0"
 `

@@ -1,8 +1,5 @@
 # Reddittui, forked by MBtion
-A fork to implement more simple color configuration to Reddittui.
-
-## Roadmap
-- [ ] Custom color configuration from a TOML file.
+A fork to implement a more simple color configuration to Reddittui.
 
 A lightweight terminal application for browsing Reddit from your command line. Powered by [bubbletea](https://github.com/charmbracelet/bubbletea)
 
@@ -27,7 +24,7 @@ https://github.com/user-attachments/assets/40d61ef3-3a95-4a26-8c49-bec616f6ae1c
 Clone the repository and run the install script: 
 
 ```bash
-git clone https://github.com/tonymajestro/reddit-tui.git reddittui
+git clone https://github.com/mbti0n/reddit-tui reddittui
 cd reddittui
 ./install.sh
 ```
@@ -36,30 +33,6 @@ To remove reddittui run the uninstall script:
 
 ```bash
 ./uninstall.sh
-```
-
-### Arch
-Arch users can install reddittui from the AUR using yay or other AUR helpers.
-
-[Pre-compiled](https://aur.archlinux.org/packages/reddit-tui-bin) and [source packages](https://aur.archlinux.org/packages/reddit-tui) are available.
-
-```bash
-yay -S reddit-tui-bin
-```
-
-```bash
-yay -S reddit-tui
-```
-
-### Nix
-Nix users can try it in a shell or add it to their system config like this.
-```bash
-nix-shell -p reddit-tui
-```
-```nix
-  environment.systemPackages = [
-      pkgs.reddit-tui
-    ];
 ```
 
 ## Usage
@@ -100,13 +73,7 @@ go build && go run .
   - **q, esc**: Exit reddittui
 
 ## Configuration files
-After running the reddittui binary, the following files will be initialized:
-- Configuration file:
-  - `~/.config/reddittui/reddittui.toml`
-- Log file:
-  - `~/.local/state/reddittui.log`
-- Cache
-  - `~/.cache/reddittui/`
+Directory: `~/.config/reddittui/reddittui.toml`
 
 Sample configuration:
 ```toml
@@ -129,6 +96,26 @@ cacheTtlSeconds = 3600
 [server]
 domain = "old.reddit.com"
 type = "old"
+
+# Color configuration
+[colors]
+accent = "#FF713E"
+link = "#6688E4"
+negative = "#6B5DFB"
+text = "#F5F5F5"
+subtext = "#D0D0D0"
+```
+
+### Color configuration
+Edit the `[colors]` category inside the `reddittui.toml` file. Here's the default configurations.
+
+```toml
+[colors]
+accent = "#ff713e"
+link = "#6688E4"
+negative = "#6B5DFB"
+text = "#F5F5F5"
+subtext = "#D0D0D0"
 ```
 
 ## Redlib

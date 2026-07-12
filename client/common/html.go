@@ -19,14 +19,19 @@ const (
 )
 
 var (
-	HyperLinkStyle     = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Link)).Italic(true)
-	LinkPostTitleStyle = lipgloss.NewStyle().Bold(true).Foreground(colors.AdaptiveColor(colors.Text))
+	HyperLinkStyle     lipgloss.Style
+	LinkPostTitleStyle lipgloss.Style
 )
 
 const LimitQueryParameter = "limit=500"
 
 type HtmlNode struct {
 	*html.Node
+}
+
+func LinkStyle() {
+	HyperLinkStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Link)).Italic(true)
+	LinkPostTitleStyle = lipgloss.NewStyle().Bold(true).Foreground(colors.AdaptiveColor(colors.Text))
 }
 
 func (n HtmlNode) GetAttr(key string) string {

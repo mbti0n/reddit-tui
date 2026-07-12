@@ -5,7 +5,9 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"reddittui/client/common"
 	"reddittui/components"
+	"reddittui/components/colors"
 	"reddittui/config"
 	"reddittui/utils"
 
@@ -22,6 +24,9 @@ type CliArgs struct {
 
 func main() {
 	configuration, _ := config.LoadConfig()
+
+	colors.ColorTheme = configuration.Colors
+	common.LinkStyle()
 
 	logFile, err := utils.InitLogger(configuration.Core.LogLevel)
 	if err != nil {

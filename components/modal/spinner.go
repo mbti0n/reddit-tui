@@ -10,22 +10,24 @@ import (
 )
 
 var (
-	spinnerStyle     = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
 	spinnerTextStyle = lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Text)).Italic(true)
 )
 
 type SpinnerModal struct {
 	spinner.Model
 	LoadingMessage string
+	spinnerStyle lipgloss.Style
 }
 
 func NewSpinnerModal() SpinnerModal {
+	spinnerStyle := lipgloss.NewStyle().Foreground(colors.AdaptiveColor(colors.Accent))
 	model := spinner.New()
 	model.Spinner = spinner.Dot
 	model.Style = spinnerStyle
 
 	return SpinnerModal{
 		Model: model,
+		spinnerStyle: spinnerStyle,
 	}
 }
 
@@ -47,7 +49,7 @@ func (s SpinnerModal) View() string {
 func (s *SpinnerModal) SetLoading(message string) {
 	model := spinner.New()
 	model.Spinner = spinner.Dot
-	model.Style = spinnerStyle
+	model.Style = s.spinnerStyle
 	s.Model = model
 	s.LoadingMessage = message
 }

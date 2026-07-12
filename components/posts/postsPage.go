@@ -33,6 +33,7 @@ type PostsPage struct {
 }
 
 func NewPostsPage(redditClient client.RedditClient, home bool) PostsPage {
+	postHeaderStyle()
 	items := list.New(nil, NewPostsDelegate(), 0, 0)
 	items.SetShowTitle(false)
 	items.SetShowStatusBar(false)

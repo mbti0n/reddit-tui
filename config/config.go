@@ -4,6 +4,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"reddittui/components/colors"
 	"reddittui/utils"
 
 	"github.com/BurntSushi/toml"
@@ -16,10 +17,11 @@ const (
 )
 
 type Config struct {
-	Core   CoreConfig   `toml:"core"`
-	Filter FilterConfig `toml:"filter"`
-	Client ClientConfig `toml:"client"`
-	Server ServerConfig `toml:"server"`
+	Core   CoreConfig     `toml:"core"`
+	Filter FilterConfig   `toml:"filter"`
+	Client ClientConfig   `toml:"client"`
+	Server ServerConfig   `toml:"server"`
+	Colors colors.Palette `toml:"colors"`
 }
 
 type CoreConfig struct {
@@ -54,6 +56,7 @@ func NewConfig() Config {
 			Domain: defaultDomainName,
 			Type:   defaultServerType,
 		},
+		Colors: colors.ColorTheme,
 	}
 }
 
@@ -84,7 +87,7 @@ func LoadConfig() (Config, error) {
 
 	defer configFile.Close()
 
-	var configFromFile Config
+	configFromFile := defaultConfig
 	decoder := toml.NewDecoder(configFile)
 	meta, err := decoder.Decode(&configFromFile)
 	if err != nil {
@@ -132,6 +135,26 @@ func mergeConfig(left, right Config, meta toml.MetaData) Config {
 
 	if meta.IsDefined("server", "type") {
 		left.Server.Type = right.Server.Type
+	}
+
+	if meta.IsDefined("colors", "accent") {
+		left.Colors.Accent = right.Colors.Accent
+	}
+
+	if meta.IsDefined("colors", "link") {
+		left.Colors.Link = right.Colors.Link
+	}
+
+	if meta.IsDefined("colors", "negative") {
+		left.Colors.Negative = right.Colors.Negative
+	}
+	
+	if meta.IsDefined("colors", "text") {
+		left.Colors.Text = right.Colors.Text
+	}
+
+	if meta.IsDefined("colors", "subtext") {
+		left.Colors.Subtext = right.Colors.Subtext
 	}
 
 	return left
