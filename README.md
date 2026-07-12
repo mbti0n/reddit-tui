@@ -1,6 +1,8 @@
 # reddit-tui, forked by MBtion
 A fork to implement a more simple color configuration to [Tony Majestro's reddit-tui](https://github.com/tonymajestro/reddit-tui), a lightweight terminal application for browsing Reddit from your command line.
 
+*Disclosure: AI was partly assisted in the process of implementing .toml file import.*
+
 <img width="1802" height="1163" alt="Screenshot 2026-07-11 at 6 29 49 PM" src="https://github.com/user-attachments/assets/5ed7747c-0ae7-451c-b1d0-7212049aff63" />
 
 ## Features
@@ -120,6 +122,3 @@ Clone this repository, then run this command to both build and run the program a
 ```bash
 go build && go run .
 ```
-
-## Acknowledgments
-Reddittui is based on the [bubbletea](https://github.com/charmbracelet/bubbletea) framework. It also takes inspiration from [circumflex](https://github.com/bensadeh/circumflex), a hackernews terminal browser.
