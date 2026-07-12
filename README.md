@@ -26,7 +26,7 @@ cd reddittui
 ./install.sh
 ```
 
-To remove reddittui run the uninstall script:
+To remove `reddittui`, run the uninstall script:
 
 ```bash
 ./uninstall.sh
