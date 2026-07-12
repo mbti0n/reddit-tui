@@ -1,7 +1,7 @@
-# Reddittui, forked by MBtion
-A fork to implement a more simple color configuration to Reddittui.
+# reddit-tui, forked by MBtion
+A fork to implement a more simple color configuration to [Tony Majestro's reddit-tui](https://github.com/tonymajestro/reddit-tui), a lightweight terminal application for browsing Reddit from your command line.
 
-A lightweight terminal application for browsing Reddit from your command line. Powered by [bubbletea](https://github.com/charmbracelet/bubbletea)
+<img width="1802" height="1163" alt="Screenshot 2026-07-11 at 6 29 49 PM" src="https://github.com/user-attachments/assets/5ed7747c-0ae7-451c-b1d0-7212049aff63" />
 
 ## Features
 - **Subreddit Browsing:** Navigate through your favorite subreddits.
@@ -9,18 +9,13 @@ A lightweight terminal application for browsing Reddit from your command line. P
 - **Keyboard Navigation:** Scroll and select posts using vim/standard keyboard shortcuts.
 - **Configurable**: Customize caching behavior and define subreddit filters using a configuration file
 
-## Demo
-https://github.com/user-attachments/assets/40d61ef3-3a95-4a26-8c49-bec616f6ae1c
-
-## Installation
-
-### Git
-#### Prerequisites
+## Prerequisites
 - **Git**
 - **Go:** Version 1.16 or newer
 - **Terminal:** A Unix-like terminal (Linux, macOS, or similar).
 - **POSIX Utilities:** The `install` command is used for installation, which is available on both Linux and macOS.
 
+## Installation
 Clone the repository and run the install script: 
 
 ```bash
@@ -36,8 +31,6 @@ To remove reddittui run the uninstall script:
 ```
 
 ## Usage
-Run the installed binary from your preferred terminal:
-
 ```bash
 # Open reddittui, navigating to the home page
 reddittui
@@ -49,13 +42,7 @@ reddittui --subreddit dogs
 reddittui --post 1iyuce4
 ```
 
-### Build
-Clone this repository, then run this command to both build and run the program after changing something.
-```bash
-go build && go run .
-```
-
-## Keybindings
+### Keybindings
 - Navigation
   - **h, j, k, l:** move left/down/up/right (Vim-style) 
   - **left, right, up, down:** move left/down/up/right (arrow)
@@ -118,13 +105,20 @@ text = "#F5F5F5"
 subtext = "#D0D0D0"
 ```
 
-## Redlib
+### Redlib
 For enhanced privacy, private [Redlib backends](https://github.com/redlib-org/redlib) are supported. A list of Redlib servers can be found [here](https://github.com/redlib-org/redlib-instances/blob/main/instances.json). Use the following configuration to use a Redlib server instead of old.reddit.com:
 
 ```toml
 [server]
 domain = "safereddit.com"
 type = "redlib"
+```
+
+
+## Build
+Clone this repository, then run this command to both build and run the program after changing something.
+```bash
+go build && go run .
 ```
 
 ## Acknowledgments
