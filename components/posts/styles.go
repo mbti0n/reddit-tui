@@ -24,7 +24,7 @@ func NewPostsDelegate() list.DefaultDelegate {
 		BorderForeground(selectedColor)
 
 	listStyle.SelectedDesc = listStyle.SelectedDesc.
-		Foreground(colors.AdaptiveColor(colors.Subtext)).
+		Foreground(colors.AdaptiveColor(colors.Accent)).
 		BorderForeground(selectedColor)
 
 	delegate.Styles = listStyle
