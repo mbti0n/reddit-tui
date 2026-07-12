@@ -98,7 +98,7 @@ Edit the `[colors]` category inside the `reddittui.toml` file. Here's the defaul
 
 ```toml
 [colors]
-accent = "#ff713e"
+accent = "#FF713E"
 link = "#6688E4"
 negative = "#6B5DFB"
 text = "#F5F5F5"
