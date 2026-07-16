@@ -106,6 +106,7 @@ negative = "#6B5DFB"
 text = "#F5F5F5"
 subtext = "#D0D0D0"
 ```
+Check out more color configurations [here](https://github.com/mbti0n/reddit-tui-colorscheme).
 
 ### Redlib
 For enhanced privacy, private [Redlib backends](https://github.com/redlib-org/redlib) are supported. A list of Redlib servers can be found [here](https://github.com/redlib-org/redlib-instances/blob/main/instances.json). Use the following configuration to use a Redlib server instead of old.reddit.com:
